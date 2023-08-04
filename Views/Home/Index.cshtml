@@ -1,0 +1,21 @@
+﻿@model List<WebApplication_finel.Movie>
+
+<h1>Movies</h1>
+<div>
+    @if (Model != null && Model.Count > 0)
+    {
+        <ul>
+            @foreach (var movie in Model)
+            {
+                <li>
+                    <h3>@movie.Title (@movie.Year)</h3>
+                    <img src="@movie.PosterPath" alt="@movie.Title" />
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No movies found.</p>
+    }
+</div>
